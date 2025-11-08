@@ -1,0 +1,27 @@
+{
+    "chamber": "gateway",
+    "phase": "MVP-1",
+    "rta_alignment": "Agni - Purifies all flows before entry",
+    "objectives": [
+        "Set up Gateway repo and README",
+        "Expose /health endpoint returning {\"ok\": true}",
+        "Add basic headers (CSP, HSTS, XFO) via config or middle ware",
+        "Document curl tests in README"
+    ],
+    "tests":{
+        "health": "curl -i http://localhost/health ->200 + {ok: true}",
+        "headers": "curl -sI http://localhost/ -> security headers present",
+        "rate_limit_smoke":"simple  stress test returns  some 429,  no crash"
+    },
+    "definition_of_done": [
+        "All objectives pass locally",
+        "README: what/why/how +commands",
+        "progress.log updated with Reflection note",
+        "Tag v0.1.0 in repo"
+    ],
+    "risks": [
+        "Over-scoping before MVP",
+        "CSP too strict blocking assets"
+    ],
+    "next_phase_hint": "Add PoW or challenge gate after stable headers"
+}
