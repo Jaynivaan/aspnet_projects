@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center hero">
+    <h1 id="title" class=" display-4 "> My Muusik Page </h1>
+    <p class="card-subtitle"> Hover the title to see the Magic your perception brings to you through a fool like me!!! further more click the button to experience what next level brings !!!</p>
+
+    <!--youtube embedded video-->
+    <div class="video-wrap">
+        <iframe width="815" height="458" src="https://www.youtube.com/embed/e-ORhEE9VVg?list=RDe-ORhEE9VVg" title="Taylor Swift - Blank Space" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <button class="btn btn-primary mt-3" onclick="startMove()" > Start Animation</button>
+    <!--Animation target-->
+    <div class="stage">
+        <div id="box" class="box">🟦</div>
+    </div>
+</div>
+
+
+
